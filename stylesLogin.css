@@ -1,0 +1,242 @@
+:root {
+  --bg-primary: #000000;
+  --accent-blue: #1E90FF;
+  --accent-green: #39FF14;
+  --text-primary: #FFFFFF;
+  --text-secondary: #D3D3D3;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+
+/* ===== HEADER ===== */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--accent-blue);
+  box-shadow: 0 1px 12px rgba(30, 144, 255, 0.35);
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.logo .level-up {
+  color: var(--text-primary);
+}
+
+.logo .gamer {
+  color: var(--accent-green);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
+
+/* Navegación */
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-blue);
+  transition: width 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--accent-blue);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== SECCIÓN LOGIN / REGISTRO ===== */
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 80vh;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: #0d0d0d;
+  border: 1px solid rgba(30, 144, 255, 0.3);
+  border-radius: 8px;
+  padding: 40px 36px;
+  box-shadow: 0 0 24px rgba(30, 144, 255, 0.15);
+}
+
+.register-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.register-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 28px;
+}
+
+/* Filas y grupos de campos */
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #6b6b6b;
+}
+
+.form-group input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 6px rgba(30, 144, 255, 0.4);
+}
+
+/* Estilo del selector de fecha nativo en fondo oscuro */
+
+.form-group input[type="date"] {
+  color-scheme: dark;
+}
+
+/* Mensajes de error por campo */
+
+.error-message {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #ff5c5c;
+  min-height: 16px;
+  margin-top: 4px;
+}
+
+/* Botón Registrarte */
+
+.btn-registrar {
+  width: 100%;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000000;
+  background-color: var(--accent-green);
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.btn-registrar:hover {
+  box-shadow: 0 0 14px rgba(57, 255, 20, 0.5);
+}
+
+.btn-registrar:active {
+  transform: scale(0.98);
+}
+
+/* Mensaje general (bienvenida / descuento Duoc) */
+
+.form-message {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--accent-green);
+  margin-top: 16px;
+  min-height: 18px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  text-align: center;
+  padding: 24px 20px;
+  border-top: 1px solid rgba(30, 144, 255, 0.3);
+}
+
+.footer p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
