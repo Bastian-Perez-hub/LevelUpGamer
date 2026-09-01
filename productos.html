@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level-Up Gamer - Productos</title>
+    <title>Level-Up Gamer | Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesProductos.css">
 </head>
 <body>
     <header>
-        <h2>LEVEL-UP GAMER</h2>
+        <a href="index.html" class="logo">
+            <span class="level-up">LEVEL-UP</span><span class="gamer">GAMER</span>
+        </a>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="productos.html" class="active">Productos</a>
-            <a href="login.html">Ingreso</a>
+            <ul>
+                <li><a href="carrito.html" class="cart-icon">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="login.html">Ingreso</a></li>
+            </ul>
         </nav>
-        <a href="carrito.html" class="cart-icon">🛒 Carrito (<span id="cart-count">0</span>)</a>
     </header>
 
     <main>
-        <h2>Catálogo de Productos</h2>
+        <h2 class="section-title">Catálogo de Productos</h2>
         <div id="product-grid" class="grid-container"></div>
     </main>
 
-    <footer>
+    <section class="footer">
         <p>&copy; 2026 Level-Up Gamer. Todos los derechos reservados.</p>
-    </footer>
+    </section>
 
     <script src="productos.js"></script>
 </body>
